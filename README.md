@@ -1,2 +1,4 @@
 # skin-lesion-shortcut-learning
-Evaluates shortcut learning and artifact reliance (ink marks, rulers, hair) in ISIC-trained skin lesion classifiers to measure real-world diagnostic robustness.
+This project will empirically test for shortcut learning in a skin cancer image classifier. I will train or fine-tune a small convolutional neural network on dermoscopic images from the ISIC 2019 and 2020 datasets, using the standard benign and malignant labels. Rather than only reporting the model´s accuracy, the goal  of the project is to investigate what the model is actually looking at when making a decision.
+
+To do this, I will use Grad-CAMand related saliency methods to generate heatmaps showing which pixels most influenced each prediction. These heatmaps will help me visually examine whether the model attends to the lesion itself or to surrounding artifacts like ink markings, rulers, hair, or patches of black border. 
