@@ -86,24 +86,6 @@ Section 2 requires manual download of the two ISIC 2018 zips into `MyDrive/short
 
 **Grad-CAM is illustration, not evidence.** It generates figures. The argument rests on the delta measurements.
 
-## Caveats that affect interpretation
-
-**Scaling to ISIC 2019 requires deduplication first.** ISIC 2018 Task 1–2 images are drawn
-from the same archive as ISIC 2019, so training on 2019 and evaluating on 2018 would test on
-memorized images and inflate every reported number. Cassidy et al. (2022) removed 14,310
-duplicates from ISIC training data and obtained a best AUC of 0.80 on the curated result —
-below figures commonly reported on uncurated splits. Deduplicate by image ID before any
-cross-release extension.
-
-**Weak correlations do not imply no shortcut.** Bissoto et al. found individually modest
-artifact–label associations alongside above-chance classification on fully lesion-occluded
-images. Background signal need not be attributable to any single annotated artifact, which is
-precisely why the lesion/background split is the right cut rather than per-artifact masking.
-
-**Fill mode is a free parameter.** If the conclusion flips between blur, mean, and black fill,
-that instability is a finding and must be reported rather than resolved by picking the
-favorable one.
-
 ## Positioning
 
 | Prior work | Contribution | Gap |
